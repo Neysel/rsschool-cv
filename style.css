@@ -1,0 +1,294 @@
+* {
+font-family: "Ubuntu", sans-serif;
+box-sizing: border-box;
+}
+
+:root {
+  --pink: #ee2db4; 
+  /* --pink: #5c0042;  */
+  --blue: #24baff;
+  --text: white;
+}
+
+
+.pink {
+  color: var(--pink);
+}
+
+body {
+  transition: 0.5s;
+    background-color: #1e1f27;
+    color: var(--text);
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .container, .container_header, .container_footer {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .header {
+    margin: 0 50px;
+  } 
+
+  .nav-list {
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin-right: 50px;
+   
+  }
+ .nav-link {
+    padding: 0 20px;
+    line-height: 50px;
+    transition: .3s;
+    text-decoration: none; 
+    color: var(--text);
+    /* color: rgb(16, 6, 51); */
+    font-weight: 400;
+    line-height: 1.5;
+      }
+header .nav-item{
+  font-size: 25px;
+}
+html {
+  scroll-behavior: smooth; 
+}
+
+
+
+.changeTheme {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  background-image: url(../rsschool-cv/assets/icons/light_mode.png);
+  filter: invert(100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  right: 7vw;
+  top: 20px;
+}
+
+  
+section.introWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+  
+p.my_photo {
+  /* margin-top: 40px; */
+    overflow:hidden;
+    width:160px;
+    height:160px;
+}
+img.my_photo {
+  position: relative;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   width:140px;
+   height:140px;
+   object-fit:cover;
+   border-radius: 50%;
+}
+
+main {
+  font-size: 18px;
+}
+
+section {
+  margin: 0 20px;
+}
+
+h1 {
+
+  font-size: 40px;
+  max-width: 1440px;
+ }
+ 
+ section#profile {
+ height: 380px
+ }
+
+section#profile h2 {
+ font-size: 40px;
+}
+
+#profile .pink {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#profile ul li {
+  margin-bottom: 10px;
+  
+}
+
+#profile ul li a {
+  color: var(--text)
+}
+#profile ul li a:hover{
+  color: var(--blue);
+}
+
+section h2::after{
+  content: "";
+    height: 3px;
+   background: var(--blue);
+    width: 25vw; 
+    display: block;
+}
+
+section#summary  {
+  align-self: flex-end;
+  margin-left: 0px;
+  width: 45vw;
+}
+
+section#summary p {
+  margin-left: 25px;
+}
+
+section.introWrapper {
+
+}
+
+section#skills ul {
+  padding-left: 0;
+    display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+  position: relative;
+}
+
+section#skills ul li {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  /* position: absolute; */
+  /* top: 50%; */
+  list-style: none;
+  padding-left: 48px;
+  height: 50px;
+  background-size: 40px;
+  background-position: 5px;
+}
+
+section#skills ul li::after {
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+
+ section#projects {
+}
+
+.projectGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projectGallery .text {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.projectGallery img {
+  width: 300px;
+  height: 180px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.projectGallery img:hover {
+  transform: scale(1.5);
+  transition: 0.2s All;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+  
+  section#experience {
+    margin-top: 80px;
+  }
+  section#education {
+    margin-top: 80px;
+  }
+  section#contacts {
+    margin-top: 80px;
+  }
+
+footer {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100px;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+}
+
+ul.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+
+.footer__links a {
+  color: var(--text);
+text-decoration: none;
+}
+.footer__links a:hover {
+  color: var(--blue);
+}
+
+.footer__links img {
+  width: 150px;
+  filter: invert(100%);
+  background:transparent;
+}
+
+code {
+  /* background-color: #eee; */
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+
+/* Средние экраны */
+@media all and (max-width: 800px) {
+  .nav-list {
+    /* На экранах среднего размера мы центрируем элементы, равномерно распределяя пустое пространство вокруг элементов */
+    flex-direction: column;
+  }
+}
+
+ @media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}
+
+/* Маленькие экраны */
+@media all and (max-width: 500px) {
+  .nav-list {
+    /* На маленьких экранах мы больше не используем направление строки, а используем столбец */
+    flex-direction: column;
+  }
+}
