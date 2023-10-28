@@ -1,147 +1,160 @@
 * {
 font-family: "Ubuntu", sans-serif;
 box-sizing: border-box;
-background-color: #1e1f27;
-color: white;
 }
+
 :root {
   --pink: #ee2db4; 
+  /* --pink: #5c0042;  */
   --blue: #24baff;
+  --text: white;
 }
 
-/* Средние экраны */
-@media all and (max-width: 800px) {
-  .nav-list {
-    /* На экранах среднего размера мы центрируем элементы, равномерно распределяя пустое пространство вокруг элементов */
-    flex-direction: column;
-  }
-}
-
-/* Маленькие экраны */
-@media all and (max-width: 500px) {
-  .nav-list {
-    /* На маленьких экранах мы больше не используем направление строки, а используем столбец */
-    flex-direction: column;
-  }
-}
 
 .pink {
   color: var(--pink);
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  transition: 0.5s;
+    background-color: #1e1f27;
+    color: var(--text);
     min-height: 100%;
     margin: 0 auto;
     padding: 0;
-    
   }
   .container, .container_header, .container_footer {
     max-width: 1240px;
     margin: 0 auto;
   }
+
+  .header {
+    margin: 0 50px;
+  } 
+
+.changeTheme {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  background-image: url(../rsschool-cv/assets/icons/light_mode.png);
+  filter: invert(100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  right: 20vw;
+  top: 20px;
+}
+
   
-  /* .main-container {
-    max-width: 1240px;
-    margin: 0 auto; 
-  } */
-
-  .section {
-    width: 50%;
-    
-  }
-  .nav-list {
-    
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    margin-right: 50px;
-   
-  }
- .nav-link {
-    padding: 0 20px;
-    line-height: 50px;
-    transition: .3s;
-    text-decoration: none; 
-    color: white;
-    /* color: rgb(16, 6, 51); */
-    font-weight: 400;
-    line-height: 1.5;
-      }
-header .nav-item{
-  font-size: 25px;
+section.introWrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
-html {
-  scroll-behavior: smooth; 
-}
-
+  
 p.my_photo {
-    position: center;
+  /* margin-top: 40px; */
     overflow:hidden;
-    width:220px;
-    height:220px;
-    margin: 50px auto;
+    width:160px;
+    height:160px;
 }
 img.my_photo {
   position: relative;
    top:50%;
    left:50%;
    transform:translate(-50%,-50%);
-   width:200px;
-   height:200px;
+   width:140px;
+   height:140px;
    object-fit:cover;
    border-radius: 50%;
 }
 
-@media (max-width: 768px) {
-  .section {
-    width: 100%;
-  }
-}
-
-/* .nav-item {
-  text-decoration: none;
-  color: #829985;
-  transition: color 0.5s;
-} */
-
-.nav-link:hover {
-  color: var(--blue);
-}
-
 main {
-  font-size: 25px;
+  font-size: 18px;
 }
+
+section {
+  margin: 0 20px;
+}
+
+h1 {
+
+  font-size: 40px;
+  max-width: 1440px;
+ }
+ 
+ section#profile {
+ height: 380px
+ }
 
 section#profile h2 {
- font-size: 30px;
- text-align: center;
+ font-size: 40px;
 }
 
-section#profile h1 {
-  font-size: 50px;
-  text-align: center;
+#profile .pink {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#profile ul li {
+  margin-bottom: 10px;
   
 }
 
-section h1 {
- font-size: 40px;
- max-width: 1440px;
- position: center;
+#profile ul li a {
+  color: var(--text)
+}
+#profile ul li a:hover{
+  color: var(--blue);
+}
+
+section h2::after{
+  content: "";
+    height: 3px;
+   background: var(--blue);
+    width: 25vw; 
+    display: block;
+}
+
+section#summary  {
+  align-self: flex-end;
+  margin-left: 0px;
+  width: 45vw;
 }
 
 section#summary p {
   margin-left: 25px;
 }
 
+section.introWrapper {
 
-section#skills {
-  margin-top: 80px;
 }
 
+section#skills ul {
+  padding-left: 0;
+    display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+  position: relative;
+}
+
+section#skills ul li {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  /* position: absolute; */
+  /* top: 50%; */
+  list-style: none;
+  padding-left: 48px;
+  height: 50px;
+  background-size: 40px;
+  background-position: 5px;
+}
+
+section#skills ul li::after {
+}
 
 a:hover {
   color: var(--blue);
@@ -149,8 +162,33 @@ a:hover {
 
 
  section#projects {
-  margin-top: 80px;
 }
+
+.projectGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projectGallery .text {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.projectGallery img {
+  width: 300px;
+  height: 180px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.projectGallery img:hover {
+  transform: scale(1.5);
+  transition: 0.2s All;
+  cursor: pointer;
+  overflow: hidden;
+}
+
   
   section#experience {
     margin-top: 80px;
@@ -164,6 +202,8 @@ a:hover {
 
 footer {
   margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
   height: 100px;
 }
 
@@ -182,18 +222,39 @@ ul.footer {
   
 }
 
-/* .footer_list {
-  /* padding: 0 200px; */
-  /* line-height: 50px;
-  font-weight: 400;
-  line-height: 1.5; 
-}*/
-
+.footer__links a {
+  color: var(--text);
+text-decoration: none;
+}
+.footer__links a:hover {
+  color: var(--blue);
+}
 
 .footer__links img {
   width: 150px;
+  filter: invert(100%);
+  background:transparent;
 }
 
 
- /* width: 200px;
- height: 200px; */
+/* Средние экраны */
+@media all and (max-width: 800px) {
+  .nav-list {
+    /* На экранах среднего размера мы центрируем элементы, равномерно распределяя пустое пространство вокруг элементов */
+    flex-direction: column;
+  }
+}
+
+ @media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}
+
+/* Маленькие экраны */
+@media all and (max-width: 500px) {
+  .nav-list {
+    /* На маленьких экранах мы больше не используем направление строки, а используем столбец */
+    flex-direction: column;
+  }
+}
