@@ -1,2 +1,2 @@
 # rsschool-cv
-https://Neysel.github.io/rssschoolcvForSchool/
+https://Neysel.github.io/rsschool-cv/
