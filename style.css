@@ -183,6 +183,8 @@ a:hover {
 }
 
 .projectGallery img:hover {
+  position: relative;
+  z-index: 9;
   transform: scale(1.5);
   transition: 0.2s All;
   cursor: pointer;
