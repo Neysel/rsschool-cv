@@ -11,7 +11,22 @@
 <body class="page">
     <header class="header">
         <div class="container_header">
+<<<<<<< HEAD
             <div class="changeTheme"></div>
+=======
+            <div class="changeTheme">
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                  <!-- <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li> -->
+                  <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                  <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                  <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                  <li class="nav-item"><a href="#code_example" class="nav-link">Languages</a></li>
+                  <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                </ul>
+            </nav>
+>>>>>>> origin/rsschool-cv-html
         </div>
     </header>
     <main class="container">
@@ -114,9 +129,33 @@
                 <li>Сode-basics - HTML, CSS </li>
             </ul>
         </section>
-        <!-- <section id="contacts"> -->
-
-        <!-- </section> -->
+        <section id="code_example">
+            <h2 class="pink"> Code example </h2>
+            <pre>
+            <code>
+                const client_id = 'SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo'
+                const clientid1 = 'Pxz_KcGxu7rkM7gi5K4AEXN8UAOBUYzfd98HSJysmpA'
+                let searchRes
+                let state = []
+                search.focus()
+                
+                let url = `https://api.unsplash.com/photos/random?client_id=${clientid1}&count=16` 
+                
+                async function getData() {
+                    const res = await fetch(url);
+                    const data = await res.json();
+                    console.log(searchRes)
+                    console.log(data);
+                if(res.ok && data.length) {
+                  state = data
+                  setPhotos()
+                  console.log(url)
+                }
+                  }
+                  getData();
+            </code>
+            </pre>
+        </section>
     </main>
 <footer>
     <div class="container_footer">
@@ -125,6 +164,6 @@
         <div class="footer__links img" ><a href="https://rs.school/" target="_blank"><img id="footerImg" src="https://rs.school/images/rs_school_js.svg" alt="rs_school_js"></a></div>
     </div>
 </footer>
-<script src="index.js"></script>
+<!-- <script src="index.js"></script> -->
 </body>
 </html>

@@ -32,6 +32,34 @@ body {
     margin: 0 50px;
   } 
 
+  .nav-list {
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin-right: 50px;
+   
+  }
+ .nav-link {
+    padding: 0 20px;
+    line-height: 50px;
+    transition: .3s;
+    text-decoration: none; 
+    color: var(--text);
+    /* color: rgb(16, 6, 51); */
+    font-weight: 400;
+    line-height: 1.5;
+      }
+header .nav-item{
+  font-size: 25px;
+}
+html {
+  scroll-behavior: smooth; 
+}
+
+
+
 .changeTheme {
   position: absolute;
   height: 40px;
@@ -42,7 +70,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-  right: 20vw;
+  right: 7vw;
   top: 20px;
 }
 
@@ -183,8 +211,6 @@ a:hover {
 }
 
 .projectGallery img:hover {
-  position: relative;
-  z-index: 9;
   transform: scale(1.5);
   transition: 0.2s All;
   cursor: pointer;
@@ -238,6 +264,12 @@ text-decoration: none;
   background:transparent;
 }
 
+code {
+  /* background-color: #eee; */
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
 
 /* Средние экраны */
 @media all and (max-width: 800px) {
